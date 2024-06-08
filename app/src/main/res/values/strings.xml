@@ -2,4 +2,13 @@
     <string name="app_name">Translingo App</string>
     <string name="app_title">Translingo App</string>
     <string name="app_slogan">Your Multilingual Companion.</string>
+    <string name="lang_title">Select Language:</string>
+    <string name="button_title">Translate</string>
+    <string-array name="dropdown_items">
+        <item>English</item>
+        <item>Urdu</item>
+        <item>Arabic</item>
+        <item>Hindi</item>
+        <item>French</item>
+    </string-array>
 </resources>

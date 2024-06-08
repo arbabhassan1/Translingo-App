@@ -7,19 +7,16 @@
     android:background="@color/main_dark"
     tools:context=".MainActivity">
 
-
     <LinearLayout
 
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
         android:background="@color/main_color"
-
-
-        >
-
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/textView2"
@@ -27,26 +24,96 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:fontFamily="@font/poppins_bold"
-
-             android:paddingTop="30dp"
+            android:paddingTop="30dp"
             android:paddingBottom="8dp"
             android:text="@string/app_title"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
-
-            />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/app_slogan"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/textInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:maxHeight="150dp"
+        android:text="Enter Text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/textInput"
+        tools:layout_editor_absoluteX="3dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/lang_title"
             android:textColor="@color/white"
-            android:textAlignment="center" />
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:textAlignment="textStart"
+
+            />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/translateBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/button_title"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/resultShow"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
